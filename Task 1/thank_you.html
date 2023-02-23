@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Thank You🤗</title>
+</head>
+<body>
+    <div class="container2">
+        <h2>“Thanks a ton for taking out your precious time and for completing the survey
+        <br>
+        <br>
+        Email Address : <span id="emailAdd"></span>
+        <br>
+        <br>
+        Contact Number   <span id="countryCode"></span>-<span id="phone_num"></span>”</h2>
+    </div>   
+</body>
+</html>
+
+<script>
+    var user = JSON.parse(localStorage.getItem('data'));
+    console.log(user);
+
+    var email = document.getElementById("emailAdd")
+    email.innerHTML = user.email;
+
+   var code = document.getElementById("countryCode")
+   code.innerHTML = user.country;
+
+   var contact = document.getElementById("phone_num")
+   contact.innerHTML = user.number;
+</script>
